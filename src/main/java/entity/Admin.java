@@ -7,8 +7,8 @@ import java.time.LocalDate;
 
 @Entity
 @Data
-@Table(name = "users")
-public class User {
+@Table(name="admins")
+public class Admin {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     Long userId;
