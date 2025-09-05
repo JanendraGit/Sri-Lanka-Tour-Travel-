@@ -4,6 +4,7 @@ import jakarta.persistence.*;
 import lombok.Data;
 
 import java.time.LocalDate;
+import java.util.List;
 
 @Entity
 @Data
@@ -19,4 +20,10 @@ public class User {
     String role;        // (ADMIN, TOURIST, GUIDE, MANAGER)
     String country;
     LocalDate dateJoined;
+
+    @OneToMany(mappedBy = "user",cascade = CascadeType.ALL)
+    private List<Booking> bookings;
+
+    @OneToMany(mappedBy = "review",cascade = CascadeType.ALL)
+    private List<Review> reviews;
 }

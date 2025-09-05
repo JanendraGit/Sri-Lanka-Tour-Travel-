@@ -16,4 +16,7 @@ public class Payment {
     Double amount;
     String method;           // (CARD, PAYPAL, STRIPE, LOCAL)
     String status;           // (SUCCESS, FAILED, REFUNDED)
+
+    @OneToOne(mappedBy = "booking",cascade = CascadeType.ALL)
+    private Booking booking;
 }

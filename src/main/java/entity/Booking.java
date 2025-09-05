@@ -16,4 +16,21 @@ public class Booking {
     String status;           // (PENDING, CONFIRMED, CANCELED)
     Integer travelersCount;
     Double totalAmount;
+
+    @ManyToOne
+    @JoinColumn(name = "user_id")
+    private User user;
+
+    @OneToOne
+    @JoinColumn(name = "payment_id")
+    private Payment payment;
+
+    @ManyToOne
+    @JoinColumn(name = "package_id")
+    private Package package_;
+
+    @ManyToOne
+    @JoinColumn(name = "admin_id")
+    private Admin admin;
+
 }

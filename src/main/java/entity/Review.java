@@ -15,4 +15,12 @@ public class Review {
     Integer rating;          // 1–5
     String comment;
     LocalDate createdDate;
+
+    @ManyToOne
+    @JoinColumn(name = "user_id")
+    private User user;
+
+    @ManyToOne
+    @JoinColumn(name = "package_id")
+    private Package package_;
 }

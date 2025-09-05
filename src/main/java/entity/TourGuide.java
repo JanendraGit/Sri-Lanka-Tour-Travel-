@@ -3,6 +3,8 @@ package entity;
 import jakarta.persistence.*;
 import lombok.Data;
 
+import java.util.List;
+
 @Entity
 @Data
 @Table(name = "tourguides")
@@ -15,4 +17,7 @@ public class TourGuide {
     String phone;
     String language;        // (English, Sinhala, Tamil, French, etc.)
     Double rating;          // average rating
+
+    @OneToMany(mappedBy = "package",cascade = CascadeType.ALL)
+    private List<TourGuide>  tourGuides;
 }
