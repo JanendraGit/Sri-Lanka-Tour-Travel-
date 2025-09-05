@@ -1,4 +1,4 @@
-package entity;
+package org.example.srilanka_tour_and_travel.entity;
 
 import jakarta.persistence.*;
 import lombok.Data;
