@@ -20,15 +20,13 @@ public class Package {
     private String availability;
     private Integer duration;
 
+
     @ManyToOne
     @JoinColumn(name = "destination_id")
     private Destination destination;
 
-    @OneToMany(mappedBy = "booking",cascade = CascadeType.ALL)
-    private List<Booking> bookings;
-
-    @OneToMany(mappedBy = "review",cascade = CascadeType.ALL)
-    private List<Review> reviews;
+    @OneToMany(mappedBy = "travelPackage",cascade = CascadeType.ALL)
+    private List<Review> reviewList;
 
     @ManyToMany
     @JoinTable(
@@ -43,7 +41,7 @@ public class Package {
     private Admin admin;
 
     @ManyToOne
-    @JoinColumn(name = "tourguid_id")
+    @JoinColumn(name = "tourgu_id")
     private TourGuide  tourGuide;
 
     @ManyToOne

@@ -4,6 +4,7 @@ import jakarta.persistence.*;
 import lombok.Data;
 
 import java.time.LocalDate;
+import java.util.List;
 
 @Entity
 @Data
@@ -21,13 +22,13 @@ public class Booking {
     @JoinColumn(name = "user_id")
     private User user;
 
-    @OneToOne
-    @JoinColumn(name = "payment_id")
-    private Payment payment;
-
-    @ManyToOne
-    @JoinColumn(name = "package_id")
-    private Package package_;
+    @ManyToMany
+    @JoinTable(
+            name = "booking_package",
+            joinColumns = @JoinColumn(name = "booking_id"),
+            inverseJoinColumns = @JoinColumn(name = "package_id")
+    )
+    private List<Package> packageList;
 
     @ManyToOne
     @JoinColumn(name = "admin_id")

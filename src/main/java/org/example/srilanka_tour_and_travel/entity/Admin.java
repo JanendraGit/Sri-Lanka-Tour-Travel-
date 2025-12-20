@@ -21,12 +21,9 @@ public class Admin {
     String country;
     LocalDate dateJoined;
 
-    @OneToMany(mappedBy = "package",cascade = CascadeType.ALL)
+    @OneToMany(mappedBy = "admin",cascade = CascadeType.ALL)
     private List<Package> packages;
 
-    @OneToOne(mappedBy = "booking",cascade = CascadeType.ALL)
-    private Booking booking;
-
-    @OneToMany(mappedBy = "promotion",cascade = CascadeType.ALL)
+    @OneToMany(mappedBy = "admin",cascade = CascadeType.ALL)
     private List<Promotion> promotions;
 }

@@ -19,8 +19,12 @@ public class Promotion {
     LocalDate validUntil;
     Boolean active;
 
-    @ManyToMany(mappedBy = "promotion")
-    private List<Package> packages;
+    @ManyToMany
+    @JoinTable(name = "package_promotion",
+            joinColumns = @JoinColumn(name = "promo_id"),
+            inverseJoinColumns = @JoinColumn(name = "package_id"))
+    List<Package> packages;
+
 
     @ManyToOne
     @JoinColumn(name = "admin_id")

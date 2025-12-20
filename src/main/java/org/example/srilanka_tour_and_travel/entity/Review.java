@@ -22,5 +22,5 @@ public class Review {
 
     @ManyToOne
     @JoinColumn(name = "package_id")
-    private Package package_;
+    private Package travelPackage;
 }

@@ -17,6 +17,7 @@ public class Payment {
     String method;           // (CARD, PAYPAL, STRIPE, LOCAL)
     String status;           // (SUCCESS, FAILED, REFUNDED)
 
-    @OneToOne(mappedBy = "booking",cascade = CascadeType.ALL)
+    @OneToOne
+    @JoinColumn(name = "booking_id",referencedColumnName = "bookingId")
     private Booking booking;
 }

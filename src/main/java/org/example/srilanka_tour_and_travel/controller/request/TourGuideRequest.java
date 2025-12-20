@@ -3,17 +3,13 @@ package org.example.srilanka_tour_and_travel.controller.request;
 import lombok.Builder;
 import lombok.Data;
 
-import java.time.LocalDate;
-
 @Data
 @Builder
-public class UserRequest {
-    Long userId;
+public class TourGuideRequest {
+    Long guideId;
     String fullName;
     String email;
-    String password;
     String phone;
-    String role;
-    String country;
-    LocalDate dateJoined;
+    String language;        // (English, Sinhala, Tamil, French, etc.)
+    Double rating;
 }

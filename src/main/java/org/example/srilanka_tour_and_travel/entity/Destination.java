@@ -18,6 +18,6 @@ public class Destination {
     private String imageUrl;
     private Double category;
 
-    @OneToMany(mappedBy = "package",cascade = CascadeType.ALL)
+    @OneToMany(mappedBy = "destination",cascade = CascadeType.ALL)
     private List<Package> packages;
 }

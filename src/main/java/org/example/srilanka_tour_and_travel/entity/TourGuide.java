@@ -18,6 +18,6 @@ public class TourGuide {
     String language;        // (English, Sinhala, Tamil, French, etc.)
     Double rating;          // average rating
 
-    @OneToMany(mappedBy = "package",cascade = CascadeType.ALL)
-    private List<TourGuide>  tourGuides;
+    @OneToMany(mappedBy = "tourGuide",cascade = CascadeType.ALL)
+    private List<Package> packages;
 }

@@ -24,6 +24,6 @@ public class User {
     @OneToMany(mappedBy = "user",cascade = CascadeType.ALL)
     private List<Booking> bookings;
 
-    @OneToMany(mappedBy = "review",cascade = CascadeType.ALL)
+    @OneToMany(mappedBy = "user",cascade = CascadeType.ALL)
     private List<Review> reviews;
 }

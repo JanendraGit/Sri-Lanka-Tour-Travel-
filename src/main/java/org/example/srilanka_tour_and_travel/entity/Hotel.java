@@ -19,6 +19,6 @@ public class Hotel {
     String imageUrl;
     String contactNumber;
 
-    @OneToMany(mappedBy = "package",cascade = CascadeType.ALL)
+    @OneToMany(mappedBy = "hotel",cascade = CascadeType.ALL)
     private List<Package> packages;
 }

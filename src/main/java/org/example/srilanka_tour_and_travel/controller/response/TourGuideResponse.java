@@ -2,15 +2,12 @@ package org.example.srilanka_tour_and_travel.controller.response;
 
 import lombok.Data;
 
-import java.time.LocalDate;
-
 @Data
-public class UserResponse {
-    Long userId;
+public class TourGuideResponse {
+    Long guideId;
     String fullName;
     String email;
     String phone;
-    String role;
-    String country;
-    LocalDate dateJoined;
+    String language;        // (English, Sinhala, Tamil, French, etc.)
+    Double rating;
 }
