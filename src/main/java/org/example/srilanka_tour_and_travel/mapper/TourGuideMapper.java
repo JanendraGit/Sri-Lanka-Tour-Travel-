@@ -1,7 +1,7 @@
 package org.example.srilanka_tour_and_travel.mapper;
 
-import org.example.srilanka_tour_and_travel.controller.dto.TourGuideDTO;
-import org.example.srilanka_tour_and_travel.controller.request.TourGuideRequest;
+import org.example.srilanka_tour_and_travel.dto.TourGuideDTO;
+import org.example.srilanka_tour_and_travel.dto.request.TourGuideRequest;
 import org.example.srilanka_tour_and_travel.entity.TourGuide;
 import org.springframework.stereotype.Component;
 

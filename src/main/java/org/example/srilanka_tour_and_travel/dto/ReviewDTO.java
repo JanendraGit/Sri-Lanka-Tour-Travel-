@@ -1,6 +1,6 @@
-package org.example.srilanka_tour_and_travel.controller.dto;
-import lombok.Data;
+package org.example.srilanka_tour_and_travel.dto;
 
+import lombok.Data;
 import java.time.LocalDate;
 
 @Data

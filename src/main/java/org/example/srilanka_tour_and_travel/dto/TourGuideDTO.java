@@ -1,4 +1,4 @@
-package org.example.srilanka_tour_and_travel.controller.dto;
+package org.example.srilanka_tour_and_travel.dto;
 
 import lombok.Data;
 

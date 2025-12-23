@@ -1,8 +1,8 @@
 package org.example.srilanka_tour_and_travel.controller;
 
-import lombok.Data;
-import org.example.srilanka_tour_and_travel.controller.dto.PackageDTO;
-import org.example.srilanka_tour_and_travel.controller.request.PackageRequest;
+import lombok.RequiredArgsConstructor;
+import org.example.srilanka_tour_and_travel.dto.PackageDTO;
+import org.example.srilanka_tour_and_travel.dto.request.PackageRequest;
 import org.example.srilanka_tour_and_travel.service.PackageService;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
@@ -10,7 +10,7 @@ import org.springframework.web.bind.annotation.*;
 
 import java.util.List;
 
-@Data
+@RequiredArgsConstructor
 @RestController
 @RequestMapping("/packages")
 public class PackageController {

@@ -1,9 +1,8 @@
 package org.example.srilanka_tour_and_travel.controller;
 
-import lombok.Data;
-import org.example.srilanka_tour_and_travel.controller.dto.UserDTO;
-import org.example.srilanka_tour_and_travel.controller.request.UserRequest;
-import org.example.srilanka_tour_and_travel.mapper.UserMapper;
+import lombok.RequiredArgsConstructor;
+import org.example.srilanka_tour_and_travel.dto.UserDTO;
+import org.example.srilanka_tour_and_travel.dto.request.UserRequest;
 import org.example.srilanka_tour_and_travel.service.UserService;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
@@ -11,12 +10,11 @@ import org.springframework.web.bind.annotation.*;
 
 import java.util.List;
 
-@Data
+@RequiredArgsConstructor
 @RequestMapping("/users")
 @RestController
 public class UserController {
     private final UserService userService;
-    private final UserMapper userMapper;
 
     @PostMapping
     public ResponseEntity<UserRequest> addUser(@RequestBody UserRequest userRequest){

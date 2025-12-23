@@ -1,4 +1,4 @@
-package org.example.srilanka_tour_and_travel.controller.response;
+package org.example.srilanka_tour_and_travel.dto.response;
 
 import lombok.AllArgsConstructor;
 import lombok.Data;
@@ -14,6 +14,6 @@ public class ReviewResponse {
     private Integer rating;
     private String comment;
     private LocalDate createdDate;
-    private String username;
-    private String packageName;
+    private Long userId;
+    private Long packageId;
 }

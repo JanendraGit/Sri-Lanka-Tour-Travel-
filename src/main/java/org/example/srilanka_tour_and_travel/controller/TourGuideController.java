@@ -1,8 +1,8 @@
 package org.example.srilanka_tour_and_travel.controller;
 
-import lombok.Data;
-import org.example.srilanka_tour_and_travel.controller.dto.TourGuideDTO;
-import org.example.srilanka_tour_and_travel.controller.request.TourGuideRequest;
+import lombok.RequiredArgsConstructor;
+import org.example.srilanka_tour_and_travel.dto.TourGuideDTO;
+import org.example.srilanka_tour_and_travel.dto.request.TourGuideRequest;
 import org.example.srilanka_tour_and_travel.service.TourGuideService;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
@@ -12,7 +12,7 @@ import java.util.List;
 
 @RestController
 @RequestMapping("/tour-guides")
-@Data
+@RequiredArgsConstructor
 public class TourGuideController {
     private final TourGuideService tourGuideService;
 
